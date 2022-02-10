@@ -164,7 +164,7 @@ public class Top_SecurityFilter extends OncePerRequestFilter {
 }
 ```
 
-## Step 3: JWT util class
+## Step 4: JWT util class
 - To generate/validate JWT token
 
 ```Java
