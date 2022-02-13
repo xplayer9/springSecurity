@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>TOP</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/5.1.3/css/bootstrap.min.css" />
+    <script src="/webjars/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/webjars/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+</head>
+<body> 
+
+<div class="container" th:if="${loginfail}">
+      <h2>Login FAIL !!!</h2>
+      <h2>User Name or Password not found</h2>
+</div>
+
+<div class="container" th:if="${logout}">
+      <h2>You are logout</h2>
+</div>
+
+<br>
+
+<div class="container">
+Top Customer Login
+    <form th:action="@{/signin}" method="post" th:object="${Top_ModelDTO}">
+        <input type="text" class="form-control-sm" required th:field="*{username}" placeholder="Enter User Name"> 
+        <input type="text" class="form-control-sm" required th:field="*{password}" placeholder="Enter Password"> 
+		<button type="submit" class="btn btn-primary">Login</button>
+    </form>
+</div>
+
+<br>
+
+</body>
+</html>
